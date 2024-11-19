@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Judson:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Judson:ital,wght@0,400;0,700;1,400&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Judson , Inria-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 html, body {
@@ -87,13 +88,15 @@ header {
 /* Layout da página com barra lateral */
 .container {
     display: flex;
-    height: 91.3vh; /* 100% da tela menos o cabeçalho */
+    min-height: 100vh; /* 100% da tela menos o cabeçalho */
+    max-height: auto;
+
 }
 
 /* Barra lateral */
 .sidebar {
     background-color: #8570bb; /* Roxo claro */
-    padding: 20px;
+    padding: 15px;
     width: 250px;
     color: white;
     display: flex;
@@ -105,6 +108,7 @@ header {
 .sidebar h2 {
     font-size: 1.2rem;
     margin-bottom: 20px;
+    margin-top: 20px;
     font-weight: 700;
 }
 
@@ -117,7 +121,7 @@ header {
 }
 
 .sidebar p{
-    font-family: Inria-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 a{
@@ -146,13 +150,17 @@ li > a:hover{
     font-size: 1.5rem;
     color: #6a0dad; /* Roxo escuro */
     margin-bottom: 20px;
-    font-family: Judson;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .content p{
-    font-family: Inria-serif;
+    font-family: 'Open Sans', sans-serif;
     margin-bottom: 40px;
-    margin-top: 40px;
+    margin-top: 40px;    
+}
+
+.content .imgtabela{
+    width: 900px;
 }
 
 .content img{
@@ -162,6 +170,7 @@ li > a:hover{
     margin: auto;
     display: block;
 }
+
 
 /* Estilo da paginação */
 .pagination {
@@ -240,110 +249,130 @@ li > a:hover{
     margin-left: 20px;
 }
 
-/* Garantir que o html e body ocupem 100% da altura */
-/*html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Judson, Inria-serif, 'Poppins', sans-serif;
-    background: #F2F2F2;
-    overflow-x: hidden; /* Evita barra lateral horizontal *
-}
-
-/* Layout principal com flexbox para ocupar 100% da tela *
-.container {
+ol {
     display: flex;
-    min-height: 100vh; /* Garante que o container ocupe 100% da altura *
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre as perguntas */
+    padding: 0; /* Remove a margem padrão da lista */
 }
 
-/* Barra lateral *
-.sidebar {
-    background-color: #8570bb; /* Roxo claro *
-    padding: 20px;
-    width: 250px;
+ol li {
+    flex-grow: 1; /* Permite que cada item ocupe todo o espaço disponível */
+    background-color: #f9f9f9; /* Fundo claro para as perguntas */
+    padding: 15px; /* Adiciona um preenchimento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    font-family: 'Open Sans', sans-serif;
+}
+
+.content button[type="submit"] {
+    display: block;          /* Transforma o botão em elemento de bloco */
+    margin: 0 auto;          /* Centraliza horizontalmente */
+    background-color: #4F378B;
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh; /* Altura completa da viewport *
-    position: sticky; /* Fixa a barra ao rolar a página *
-    top: 0;
-}
-
-/* Estilo do conteúdo principal *
-.content {
-    flex: 1;
-    background-color: white;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    min-height: 100vh; /* Garante que o conteúdo ocupe o espaço total *
-}
-
-.content h2 {
-    font-size: 1.5rem;
-    color: #6a0dad; /* Roxo escuro *
-    margin-bottom: 20px;
-}
-
-/* Estilo da paginação *
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: auto; /* Alinha a paginação no final *
-    padding-bottom: 25px; /* Espaçamento inferior para o rodapé *
-}
-
-/* Estilo dos botões da paginação *
-.pagination button {
-    background-color: #9b59b6; /* Roxo claro *
     border: none;
-    color: white;
-    padding: 10px 15px;
-    margin: 0 5px;
-    border-radius: 50%;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1em;
     transition: background-color 0.3s;
 }
 
-.pagination button.active {
-    background-color: #6a0dad; /* Roxo escuro *
+.content button[type="submit"]:hover {
+    background-color: #6a0dad;
 }
 
-.pagination button:hover {
-    background-color: #7b68ee;
+ol {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre as perguntas */
+    padding: 0; /* Remove a margem padrão da lista */
 }
 
-/* Barra de progresso *
-.progress-bar {
+h3.highlight {
+    background-color: #FFD966; /* Amarelo suave para destacar */
+    color: #4F378B; /* Roxo escuro para combinar com o tema */
     text-align: center;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #8570bb;
-    padding: 15px;
-    border-radius: 5px;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar */
 }
 
-/* Estilos responsivos *
+h3.highlight span {
+    color: #4F378B; /* Roxo escuro para um bom contraste */
+}
+
+/* Ajustes para telas de até 780px */
 @media only screen and (max-width: 780px) {
-    header {
-        padding: 20px 50px;
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -250px; /* A barra lateral começa fora da tela */
+        width: 250px;
+        height: 100vh;
+        transition: left 0.3s ease-in-out; /* Transição suave ao abrir e fechar */
+        z-index: 100; /* Certifique-se de que a sidebar fique acima do conteúdo */
     }
-    .logo {
-        font-size: 1.5em;
+
+    /* O conteúdo principal deve ter margem à esquerda quando a sidebar estiver visível */
+    .content {
+        margin-left: 0;
+        transition: margin-left 0.3s ease-in-out;
     }
-    .navigation a {
-        font-size: 1em;
-        margin-left: 20px;
+
+    /* Estilos para o ícone do menu de hambúrguer */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 101; /* Para garantir que o ícone fique acima de outros elementos */
     }
-    .navigation .btnlogin-popup {
-        width: 100px;
-        height: 40px;
-        font-size: 1em;
-        margin-left: 20px;
+
+    .hamburger .bar {
+        width: 30px;
+        height: 5px;
+        background-color: white;
+        margin: 5px 0;
+        transition: all 0.3s;
+    }
+
+    /* Barra lateral oculta */
+    .sidebar ul {
+        display: none; /* Esconde a lista de navegação quando o menu está fechado */
+    }
+
+    .sidebar.open {
+        left: 0; /* Abre a barra lateral */
+    }
+
+    .content.open {
+        margin-left: 250px; /* Ajusta o conteúdo quando a barra lateral está aberta */
     }
 }
-*/
+
+/* Quando a barra lateral está aberta, o conteúdo central se ajusta */
+@media only screen and (max-width: 780px) {
+    .sidebar.open .hamburger .bar:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 8px;
+    }
+    
+    .sidebar.open .hamburger .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .sidebar.open .hamburger .bar:nth-child(3) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -8px;
+    }
+
+    .sidebar.open ul {
+        display: block; /* Exibe a lista de navegação quando o menu está aberto */
+    }
+}

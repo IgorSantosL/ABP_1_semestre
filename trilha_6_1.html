@@ -5,55 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jornada Scrum</title>
-    <link rel="stylesheet" href="./template.css">
+    <link rel="stylesheet" href="./introdução.css" />
 </head>
 
 <body>
     <header>
         <h2 class="logo"><img class="logo" src="./d8branco 1.png" alt="Logo da Jornada Scrum"></h2>
         <nav class="navigation">
-            <a href="./introdução.html">Início</a>
-            <a href="./template.html">Sua Jornada</a>
-            <button id="btnLogin" class="btnlogin-popup">Login</button>
+          <a href="./template.html">Início</a>
+          <a href="./trilha_1_1.html">Sua Jornada</a>
+          <button id="btnLogin" class="btnlogin-popup">Login</button>
         </nav>
     </header>
     <div class="container">
         <!-- Barra lateral -->
         <aside class="sidebar">
-            <div>
-                <h2>Trilha de conhecimento</h2>
-                <ul>
-                    <li><a href="./trilha_1_1.html">1ª Trilha<br>
-                        <p>Desbravando o Scrum</p>
-                    </a></li>
-                <li><a href="./trilha_2_1.html">2ª Trilha<br>
-                        <p>Diferenciais</p>
-                    </a></li>
-                <li><a href="./trilha_3_1.html">3ª Trilha<br>
-                        <p>Scrum na prática</p>
-                    </a></li>
-                <li><a href="./trilha_4_1.html">4ª Trilha<br>
-                        <p>Missões</p>
-                    </a></li>
-                <li><a href="./trilha_5_1.html">5ª Trilha<br>
-                        <p>Classes</p>
-                    </a></li>
-                <li><a href="./trilha_6_1.html">6ª Trilha<br>
-                        <p>Os chefões do Scrum</p>
-                    </a>
-                </li>
-                    <li><a href="#">Glossário</a></li>
-                </ul>
-            </div>
-            <div class="progress-bar">
-                Missões concluídas: 0%
-            </div>
+          <div>
+            <h2>Trilha de conhecimento</h2>
+            <ul>
+              <li>
+                <a href="./trilha_1_1.html">1ª Trilha<br />
+                  <p>Iniciando sua Jornada</p>
+                </a>
+              </li>
+              <li>
+                <a href="./trilha_2_1.html">2ª Trilha<br />
+                  <p>Diferenciais em Jogo </p>
+                </a>
+              </li>
+              <li>
+                <a href="./trilha_3_1.html">3ª Trilha<br />
+                  <p>Papéis no Scrum</p>
+                </a>
+              </li>
+              <li>
+                <a href="./trilha_4_1.html">4ª Trilha<br />
+                  <p>Explorando os Backlogs </p>
+                </a>
+              </li>
+              <li>
+                <a href="./trilha_5_1.html">5ª Trilha<br />
+                  <p>Missões no Scrum </p>
+                </a>
+              </li>
+              <li>
+                <a href="./trilha_6_1.html">6ª Trilha<br />
+                  <p>Finalizando sua jornada</p>
+                </a>
+              </li>
+              <li><a href="./glossario_1.html">Glossário</a></li>
+            </ul>
+          </div>
+          <div class="progress-bar">Missões concluídas: 0%</div>
         </aside>
 
         <!-- Conteúdo principal -->
         <main class="content">
             <div>
-                <h2>6ª Trilha: Scrum na Prática </h2>
+                <h2>6ª Trilha – Finalizando sua jornada</h2>
+                <h3>Scrum na prática</h3>
                 <p>
                     Implementar o Scrum na prática envolve uma série de passos, cerimônias e papéis específicos para
                     garantir que o trabalho em equipe seja produtivo, colaborativo e voltado para entregar valor ao
@@ -88,14 +98,14 @@
             <!-- Paginação -->
             <div class="pagination">
                 <button class="active">1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
+                <button id="btn trilha6_2">2</button>
+                <button id="btn trilha6_3">3</button>
+                <button id="btn trilha6_4">4</button>
                 
             </div>
         </main>
     </div>
-    <script src="template.js"></script>
+    <script src="trilha6_1.js"></script>
 </body>
 
 </html>
