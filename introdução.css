@@ -114,10 +114,12 @@ header {
 
 .sidebar ul {
     list-style-type: none;
+    text-align: justify;
 }
 
 .sidebar ul li {
     margin-bottom: 30px;
+    text-align: justify;
 }
 
 .sidebar p{
