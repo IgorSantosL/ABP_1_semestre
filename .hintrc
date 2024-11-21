@@ -3,18 +3,10 @@
     "development"
   ],
   "hints": {
-    "compat-api/css": [
+    "axe/structure": [
       "default",
       {
-        "ignore": [
-          "user-select"
-        ]
-      }
-    ],
-    "axe/text-alternatives": [
-      "default",
-      {
-        "image-alt": "off"
+        "list": "off"
       }
     ]
   }

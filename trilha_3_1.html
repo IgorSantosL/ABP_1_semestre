@@ -2,19 +2,29 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jornada Scrum</title>
-  <link rel="stylesheet" href="./introdução.css" />
+  <script src="./JS/geral.js"></script>
+  <script src="./JS/questao.js"></script>
+  <link rel="stylesheet" href="/css_ABP/introdução.css" />
 </head>
 
-<body>
+<body onload="carregarLogin();listarQuestao();exibirMail()">
   <header>
-    <h2 class="logo"><img class="logo" src="./d8branco 1.png" alt="Logo da Jornada Scrum"></h2>
+    <h2 class="logo">
+      <img class="logo" src="/Assets/d8branco 1.png" alt="Logo da Jornada Scrum" />
+    </h2>
     <nav class="navigation">
       <a href="./template.html">Início</a>
       <a href="./trilha_1_1.html">Sua Jornada</a>
+      <button id="botao-logout" class="botao-logout" onclick="logout()">Logout</button>
       <button id="btnLogin" class="btnlogin-popup">Login</button>
+      <div class="hamburger" id="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
     </nav>
   </header>
   <div class="container">
@@ -59,6 +69,7 @@
       <div class="progress-bar">Missões concluídas: 0%</div>
     </aside>
 
+
     <!-- Conteúdo principal -->
     <main class="content">
       <div>
@@ -66,7 +77,7 @@
         <p>
           O Time Scrum é composto pelo Product Owner, o Time de Desenvolvimento e o Scrum Master.<br>
         </p>
-        <img class="papeis2" src="./papeis2.png" width="590px" height="auto">
+        <img class="papeis2" src="/Assets/papeis2.png" width="590px" height="auto">
         <br>
         <h3>P.O.:</h3>
         <p>
@@ -111,7 +122,7 @@
       </div>
     </main>
   </div>
-  <script src="./trilha3_1.js"></script>
+  <script src="/JS/trilha3_1.js"></script>
 </body>
 
 </html>

@@ -114,17 +114,14 @@ header {
 
 .sidebar ul {
     list-style-type: none;
-    text-align: justify;
 }
 
 .sidebar ul li {
     margin-bottom: 30px;
-    text-align: justify;
 }
 
 .sidebar p{
     font-family: 'Open Sans', sans-serif;
-    
 }
 
 a{
@@ -158,13 +155,12 @@ li > a:hover{
 
 .content p{
     font-family: 'Open Sans', sans-serif;
-    text-align: justify;
     margin-bottom: 40px;
     margin-top: 40px;    
 }
 
 .content .imgtabela{
-    width: 1000px;
+    width: 900px;
 }
 
 .content img{
